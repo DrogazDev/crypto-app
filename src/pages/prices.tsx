@@ -14,14 +14,7 @@ export const getStaticProps = async () => {
     }
 }
 
-interface Trader {
-    id: Number;
-    name: string;
-    current_price: string; 
-    image: string;
-  }
-
-const Data = ( {traders}: {traders: Trader[]} ) => {
+const Data = ({traders}) => {
     return (
         <div>
             <h1 className={`${styles.text_center} ${inter.className}`}>Prices</h1>
