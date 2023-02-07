@@ -36,7 +36,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a
-            href="/prices"
+            href="/Data"
             className={styles.card}
             rel="noopener noreferrer"
           >
