@@ -235,6 +235,10 @@
     backdrop-filter: blur(24px);
   }
 
+  .prism-crypto {
+    
+  }
+
   .description div {
     align-items: flex-end;
     pointer-events: none;
@@ -264,7 +268,7 @@
 
   .logo,
   .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    filter: invert(0) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 
