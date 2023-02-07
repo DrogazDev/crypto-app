@@ -14,16 +14,26 @@ export const getStaticProps = async () => {
     }
 }
 
-const Data = ({traders} : {traders:any}) => {
+interface Trader {
+    id: Number;
+    name: string;
+    current_price: string; 
+    image: string;
+  }
+
+const Data = ( {traders}: {traders: Trader[]} ) => {
     return (
-        <div className={styles.center}>
+        <div>
+            <h1 className={`${styles.text_center} ${inter.className}`}>Prices</h1>
+            <div className={styles.center}>
             <div className={styles.grid}>
-            {traders.map(trader => (
-                <div className={styles.card} key={trader.id}>
-                    <h2 className={inter.className}><img src={trader.image} alt="" height={30}/> {trader.name}</h2>
-                    <p className={inter.className}>€{trader.current_price}</p>
-                </div>
-            ))}
+                {traders.map(trader => (
+                    <div className={styles.card} key={trader.id}>
+                        <h2 className={inter.className}><img src={trader.image} alt="" height={30}/> {trader.name}</h2>
+                        <p className={inter.className}>€{trader.current_price}</p>
+                    </div>
+                ))}
+            </div>
         </div>
         </div>
     )
